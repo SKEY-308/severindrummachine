@@ -12,6 +12,36 @@
         function play(str) {
             document.getElementById(str).play();
         }
+
+        window.document.onkeydown = function (e) {
+            if (e.key === "q" || e.key === "Q") {
+                play("Q")
+            }
+            else if (e.key === "w" || e.key === "W") {
+                play("W")
+            }
+            else if (e.key === "e" || e.key === "E") {
+                play("E")
+            }
+            else if (e.key === "a" || e.key === "A") {
+                play("A")
+            }
+            else if (e.key === "s" || e.key === "S") {
+                play("S")
+            }
+            else if (e.key === "d" || e.key === "D") {
+                play("D")
+            }
+            else if (e.key === "z" || e.key === "Z") {
+                play("Z")
+            }
+            else if (e.key === "x" || e.key === "X") {
+                play("X")
+            }
+            else if (e.key === "c" || e.key === "C") {
+                play("C")
+            }
+        }
     </script>
 </head>
 
