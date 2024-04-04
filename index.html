@@ -11,6 +11,35 @@
     <script>
         function play(str) {
             document.getElementById(str).play();
+
+            if (str === "q" || str === "Q") {
+                document.getElementById('display').innerHTML = "Display Q";
+            }
+            else if (str === "w" || str === "W") {
+                document.getElementById('display').innerHTML = "Display W";
+            }
+            else if (str === "e" || str === "E") {
+                document.getElementById('display').innerHTML = "Display E";
+            }
+            else if (str === "a" || str === "A") {
+                document.getElementById('display').innerHTML = "Display A";
+            }
+            else if (str === "s" || str === "S") {
+                document.getElementById('display').innerHTML = "Display S";
+            }
+            else if (str === "d" || str === "D") {
+                document.getElementById('display').innerHTML = "Display D";
+            }
+            else if (str === "z" || str === "Z") {
+                document.getElementById('display').innerHTML = "Display Z";
+            }
+            else if (str === "x" || str === "X") {
+                document.getElementById('display').innerHTML = "Display X";
+            }
+            else if (str === "c" || str === "C") {
+                document.getElementById('display').innerHTML = "Display C";
+            }
+
         }
 
         window.document.onkeydown = function (e) {
@@ -49,47 +78,61 @@
 
     <div class="container" id="drum-machine">
 
-        <div id="display"></div>
+        <div class="row">
 
-        <div class="row gap-2 justify-content-center">
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center" id="display"> Display Something...!!</div>
+                    </div>
+                </div>
+            </div>
 
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-0" onclick="play('Q')">
-                Q <audio src="https://fr.itunemachine.com/audio/sonnerie-sms-sifflement-ringtone-439.mp3" class="clip"
-                    id="Q"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-1" onclick="play('W')">
-                W <audio src="https://fr.itunemachine.com/audio/popcorn-ringtone-347.mp3" class="clip" id="W"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-2" onclick="play('E')">
-                E <audio src="https://fr.itunemachine.com/audio/twitter-notification-sound-ringtone-923.mp3"
-                    class="clip" id="E"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-3" onclick="play('A')">
-                A <audio src="https://fr.itunemachine.com/audio/sms-alert-note-ringtone-293.mp3" class="clip"
-                    id="A"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-4" onclick="play('S')">
-                S <audio src="https://fr.itunemachine.com/audio/super-mario-coin-ringtone-566.mp3" class="clip"
-                    id="S"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-5" onclick="play('D')">
-                D <audio src="https://fr.itunemachine.com/audio/tinder-new-match-ringtone-699.mp3" class="clip"
-                    id="D"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-6" onclick="play('Z')">
-                Z <audio src="https://fr.itunemachine.com/audio/best-notification-k-ringtone-1000.mp3" class="clip"
-                    id="Z"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-7" onclick="play('X')">
-                X <audio src="https://fr.itunemachine.com/audio/whatsapp-ringtone-564.mp3" class="clip" id="X"></audio>
-            </button>
-            <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-8" onclick="play('C')">
-                C <audio src="https://fr.itunemachine.com/audio/jingle-sncf-ringtone-889.mp3" class="clip"
-                    id="C"></audio>
-            </button>
+            <div class="col-5">
 
+                <div class="row gap-2 justify-content-center">
+
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-0" onclick="play('Q')">
+                        Q <audio src="https://fr.itunemachine.com/audio/sonnerie-sms-sifflement-ringtone-439.mp3"
+                            class="clip" id="Q"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-1" onclick="play('W')">
+                        W <audio src="https://fr.itunemachine.com/audio/popcorn-ringtone-347.mp3" class="clip"
+                            id="W"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-2" onclick="play('E')">
+                        E <audio src="https://fr.itunemachine.com/audio/twitter-notification-sound-ringtone-923.mp3"
+                            class="clip" id="E"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-3" onclick="play('A')">
+                        A <audio src="https://fr.itunemachine.com/audio/sms-alert-note-ringtone-293.mp3" class="clip"
+                            id="A"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-4" onclick="play('S')">
+                        S <audio src="https://fr.itunemachine.com/audio/super-mario-coin-ringtone-566.mp3" class="clip"
+                            id="S"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-5" onclick="play('D')">
+                        D <audio src="https://fr.itunemachine.com/audio/tinder-new-match-ringtone-699.mp3" class="clip"
+                            id="D"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-6" onclick="play('Z')">
+                        Z <audio src="https://fr.itunemachine.com/audio/best-notification-k-ringtone-1000.mp3"
+                            class="clip" id="Z"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-7" onclick="play('X')">
+                        X <audio src="https://fr.itunemachine.com/audio/whatsapp-ringtone-564.mp3" class="clip"
+                            id="X"></audio>
+                    </button>
+                    <button type="button" class="drum-pad col-3 btn btn-dark" id="drum-pad-8" onclick="play('C')">
+                        C <audio src="https://fr.itunemachine.com/audio/jingle-sncf-ringtone-889.mp3" class="clip"
+                            id="C"></audio>
+                    </button>
+
+                </div>
+
+            </div>
         </div>
-
 
     </div>
 
